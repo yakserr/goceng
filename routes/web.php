@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\ConsultController;
 use App\Http\Controllers\DiseaseController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\IndicationController;
+use App\Http\Controllers\IndicationOfDiseaseController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +40,14 @@ Route::Resource('indication', IndicationController::class)->middleware('auth');
 
 // Route Disease
 Route::Resource('disease', DiseaseController::class)->middleware('auth');
+
+// Route Indication of Disease
+// Route::get('indication/{indication}/disease', [IndicationController::class, 'disease'])->name('indication.disease')->middleware('auth');
+
+// Route::get('disease/{disease}/indication', [DiseaseController::class, 'indication'])->name('disease.indication')->middleware('auth');
+
+Route::Resource('indicationofdisease', IndicationOfDiseaseController::class)->middleware('auth');
+
+Route::Resource('consult', ConsultController::class)->middleware('auth');
+
+Route::Resource('history', HistoryController::class)->middleware('auth');

@@ -13,4 +13,9 @@ class Disease extends Model
         'disease_code',
         'disease_name',
     ];
+
+    public function indications()
+    {
+        return $this->belongsToMany(Indication::class, 'indication_of_diseases', 'disease_id', 'indication_id');
+    }
 }

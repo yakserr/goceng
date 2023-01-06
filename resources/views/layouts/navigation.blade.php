@@ -17,13 +17,29 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('indication.index')" :active="request()->routeIs('indication.index')">
-                        {{ __('Indications') }}
+                    <x-nav-link :href="route('consult.index')" :active="request()->routeIs('consult.index')">
+                        {{ __('Consult') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('history.index')" :active="request()->routeIs('history.index')">
+                        {{ __('History Consult') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('disease.index')" :active="request()->routeIs('disease.index')">
                         {{ __('Disease') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('indication.index')" :active="request()->routeIs('indication.index')">
+                        {{ __('Indications') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('indicationofdisease.index')"
+                        :active="request()->routeIs('indicationofdisease.index')">
+                        {{ __('Indication of Disease') }}
                     </x-nav-link>
                 </div>
             </div>
