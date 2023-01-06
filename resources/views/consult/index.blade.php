@@ -14,24 +14,24 @@
                     <div class="form-control w-full max-w-xs ">
                         <label class="label">
                             <span class="label-text">
-                                What is your name?
+                                What is your cat name?
                                 <span class="label-text-alt text-red-600">*</span>
                             </span>
 
                         </label>
                         <input type="text" placeholder="Type Name" name="name"
-                            class="input input-bordered w-full max-w-xs" />
+                            class="input input-bordered w-full max-w-xs" required />
                         <label class="label">
                         </label>
                         <label class="label">
                             <span class="label-text">
-                                Email
+                                Your Email
                                 <span class="label-text-alt text-red-600">*</span>
                             </span>
 
                         </label>
                         <input type="text" placeholder="Type Email" name="email"
-                            class="input input-bordered w-full max-w-xs" />
+                            class="input input-bordered w-full max-w-xs" required />
                         <label class="label">
                         </label>
                     </div>

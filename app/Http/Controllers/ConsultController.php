@@ -46,13 +46,6 @@ class ConsultController extends Controller
         $consult->save();
 
 
-        return redirect()->route('consult.index');
-    }
-
-    public function history()
-    {
-        $consults = Consult::all();
-
-        return view('consult.history', ['consults' => $consults]);
+        return redirect()->route('history.index');
     }
 }
