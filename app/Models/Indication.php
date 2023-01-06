@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Indication extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'indication_code',
+        'indication_name',
+    ];
 }
