@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('indications', function (Blueprint $table) {
             $table->id();
+            $table->string('indication_code')->unique();
+            $table->string('indication_name');
             $table->timestamps();
         });
     }

@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('diseases', function (Blueprint $table) {
             $table->id();
+            $table->string('disease_code')->unique();
+            $table->string('disease_name');
             $table->timestamps();
         });
     }
