@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DiseaseController;
+use App\Http\Controllers\IndicationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+require __DIR__ . '/auth.php';
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,4 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
+// route Indications
+Route::Resource('indication', IndicationController::class)->middleware('auth');
+
+// Route Disease
+Route::Resource('disease', DiseaseController::class)->middleware('auth');
