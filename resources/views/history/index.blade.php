@@ -112,5 +112,33 @@
             </div>
         </div>
     </div>
+    <!--Toast notification-->
+    @if (session('success'))
+    <div class="toast toast-end">
+        <div class="alert alert-info">
+            <div>
+                <span class="font-bold">{{ session('success') }}</span>
+            </div>
+        </div>
+    </div>
+    @endif
+
+    @if (session('error'))
+    <div class="toast toast-end">
+        <div class="alert alert-error">
+            <div>
+                <span class="font-bold">{{ session('error') }}</span>
+            </div>
+        </div>
+    </div>
+    @endif
+    <script>
+        // if toast notification is exist, set time out 3 second
+        if (document.querySelector('.toast')) {
+            setTimeout(() => {
+                document.querySelector('.toast').classList.add('hidden');
+            }, 3000);
+        }
+    </script>
 
 </x-app-layout>

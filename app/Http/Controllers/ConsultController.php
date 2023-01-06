@@ -42,10 +42,12 @@ class ConsultController extends Controller
         }
 
         // get diseases name
-        $consult->diseases = Disease::find($diseasesf[0])->disease_name;
-        $consult->save();
-
-
-        return redirect()->route('history.index');
+        if (count($diseasesf) > 0) {
+            $consult->diseases = Disease::find($diseasesf[0])->disease_name;
+            $consult->save();
+            return redirect()->route('history.index')->with('success', 'Consultation created successfully.');
+        } else {
+            return redirect()->route('history.index')->with('error', 'Cannot find disease. Please referred to a doctor');
+        }
     }
 }
